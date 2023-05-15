@@ -12,7 +12,7 @@
     margin-right: 10%;
     margin-top: 6rem;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     padding: 0;
     padding-bottom: 1%;
@@ -21,10 +21,15 @@
 .hamburger{
     display: none;
 }
+/* 
+.main-logo{
+    display: flex;
+} */
 
 .g20logo{
     width: 6.25rem;
     margin-left: auto;
+    /* display: flex; */
 }
 
 #g20-image{
@@ -34,16 +39,17 @@
 .options{
     display: flex;
     justify-content: space-between;
-    height: 100%;
+    /* align-items: center; */
+    /* height: 100%; */
 }
 
 .options-left{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     padding: 0;
-    margin: auto 0rem;
+    margin: 0rem 1rem;
 }
 
 .options-left-upper{
@@ -51,23 +57,39 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
 }
 
-/* .options-left-upper-items-text_sizes{
-    margin-right: 1rem;
-} */
 
 .options-left-lower{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
+    gap: 2rem;
+    height: 50%;
+    border-top: 0.1rem solid black;
+}
+
+.options-left-lower-items{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+
+    color: #232323;
+
+    /* margin: auto 2rem; */
+    /* gap: 1rem; */
 }
 
 .text_sizes{
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    margin-left: 2rem;
+    gap: 1rem;
+    /* margin-left: 2rem; */
 }
 
 .text-small{
@@ -136,7 +158,7 @@
     align-items: center;
     justify-content: space-between;
     width: 3.6rem;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
 }
 
 .hindi-image{
@@ -147,23 +169,10 @@
     width: 1.7375;
 }
 
-.options-left-lower{
+.options-right{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.options-left-lower-items{
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.02em;
-
-    color: #232323;
-
-    margin: auto 2rem;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -178,38 +187,42 @@
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
-    min-width: max-content;
+    /* min-width: max-content; */
 }
 
 .menu-item{
-    /* background: #E5ECF4; */
-    font-family: 'Lato';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-
-letter-spacing: 0.02em;
-
-color: #232323;
-
-    display: flex;
-    flex-direction: column;
+    position: relative;
 }
-
 
 
 .menu-item-main-wrapper{
     padding: 0.5rem 0.2rem;
-}
-
-.menu-item > ul{
-    padding-left: 0.2rem;
+    max-width: fit-content;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    letter-spacing: 0.02em;
+    
+    color: #232323;
 }
 
 .drop_down{
     display: none;
+    padding-left: 0.2rem;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    
+    letter-spacing: 0.02em;
+    
+    color: #232323;
 }
 
 .menu-item-main-wrapper > a{
@@ -223,22 +236,33 @@ color: #232323;
     text-decoration-color: none;
     color: inherit;
     margin-top: 1rem;
-    margin-bottom: 0.5rem;    
+    margin-bottom: 0.5rem;   
+    padding-right: 1rem; 
+    min-width: 10rem;
 }
 
-/* .drop_down > a{
-    
-} */
 
-.menu-item:hover{
+.menu-item:hover .menu-item-main-wrapper{
     background: #E5ECF4;
 }
 
-/* .menu-item:hover .{
-    
-} */
-
 .menu-item:hover .drop_down{
-    display: flex;
-    flex-direction: column;
+    background: #E5ECF4;
+    display: block;
+    /* display: flex; */
+    /* flex-direction: column; */
+    min-width: fit-content;
+}
+
+
+.mobile-menu{
+    display: none;
+}
+
+.drop_down > a{
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1rem;
+    /* padding-bottom: 1rem; */
 }
