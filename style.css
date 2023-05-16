@@ -196,11 +196,14 @@
 
 
 .menu-item-main-wrapper{
-    padding: 0.5rem 0.2rem;
+    padding-top: 0.5rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    padding-bottom: 0;
     max-width: fit-content;
     font-family: 'Lato';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 14px;
     line-height: 17px;
     /* identical to box height */
@@ -210,12 +213,16 @@
     color: #232323;
 }
 
+.menu-item-main-wrapper:hover{
+    font-weight: 700;
+}
+
 .drop_down{
     display: none;
     padding-left: 0.2rem;
     font-family: 'Lato';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 14px;
     line-height: 17px;
     /* identical to box height */
@@ -237,21 +244,28 @@
     color: inherit;
     margin-top: 1rem;
     margin-bottom: 0.5rem;   
-    padding-right: 1rem; 
-    min-width: 10rem;
+    padding-right: 0.5rem; 
+    min-width: 7rem;
+}
+
+.drop_down > a:hover{
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 
 .menu-item:hover .menu-item-main-wrapper{
-    background: #E5ECF4;
+        background: #f0f1f6;
+
 }
 
 .menu-item:hover .drop_down{
-    background: #E5ECF4;
+        background: #f0f1f6;
+
     display: block;
     /* display: flex; */
     /* flex-direction: column; */
-    min-width: fit-content;
+    /* min-width: fit-content; */
 }
 
 .menu-item:hover .drop_down2{
@@ -288,7 +302,7 @@
     text-transform: capitalize;
 }
 
-.submenu1:hover .drop_down2 {
+.menu-item-main-wrapper:hover .drop_down2 {
     display: flex;
     flex-direction: column;
     min-width: 200px;
@@ -303,6 +317,10 @@
 .fa-angle-right {
     display: none;
     float: right;
+}
+
+.drop_down-elements{
+    padding-bottom: 0.5rem;
 }
 
 .drop_down-elements:hover {
@@ -329,12 +347,17 @@
 } */
 .drop_down2 {
     position: relative;
+    list-style: none;
 }
 
 .side-drop_down-elements-list div {
     padding: 0.3rem 0rem 0rem 0rem;
     font-weight: 100;
     line-height: 1.4rem;
+}
+.side-drop_down-elements-list{
+    display: none;
+    list-style: none;
 }
 
 .drop_down-elements:hover .side-drop_down-elements-list {

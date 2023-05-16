@@ -66,22 +66,24 @@
 
     .mobile-menu{
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        margin-top: 1rem;
+        padding-top: 0.1rem;
         display: block;
         width: 13rem;
         /* background-color: lightgray; */
         padding-left: 0.5rem;
+        position: relative;
+        /* margin-bottom: 1rem; */
+        /* background: #f0f1f6; */
     }
-    
-    .mobile-menu-container{
-        display: flex;
-        flex-direction: column;
-        gap: 0.7rem;
-        margin-bottom: 5rem;
-     }
-    
+   
     .mobile-drop_down{
         display: none;
+    }
+
+    .mobile-menu-item-main-wrapper{
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        padding-left: 0.5rem;
     }
 
     .mobile-menu-item-main-wrapper > a{
@@ -89,12 +91,17 @@
         text-decoration-color: none;
         font-family: 'Lato';
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         font-size: 17px;
         line-height: 17px;
         letter-spacing: 0.02em;
+        /* padding-bottom: 1rem; */
     
         color: rgba(0, 0, 0, 0.87);
+    }
+
+    .mobile-menu-item-main-wrapper > a:hover{
+        font-weight: 700;
     }
     
     
@@ -119,6 +126,10 @@
         padding-bottom: 0.7rem;
     }
 
+    .mobile-options-lower-items:hover{
+        font-weight: 700;
+    }
+
     #mobile-views{
         order: -1;
     }
@@ -141,7 +152,7 @@
         text-decoration-color: none;
         font-family: 'Lato';
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         font-size: 14px;
         line-height: 17px;
         letter-spacing: 0.02em;
@@ -165,8 +176,38 @@
         
     }
 
+    .mobile-menu-item-main-wrapper:hover{
+        background: #f0f1f6;
+    }
+
     .mobile-menu-item-main-wrapper > a :hover {
         font-weight: bold;
+    }
+
+    .mobile-menu-item:hover .mobile-drop_down{
+        display: block;
+        position: absolute;
+        left: 100%;
+        top: 0%;
+        background: #f0f1f6;;
+        min-width: 13rem;
+        height: 47rem;
+        padding-top: 0.9rem;
+        padding-left: 1rem;
+    }
+
+    .mobile-menu-item:hover .mobile-drop_down > a{
+        display: inline-block;
+        text-decoration: none;
+        text-decoration-color: none;
+        color: inherit;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        /* padding-top: 1rem; */
+        /* height: 2rem; */
+        padding-bottom: 2rem;
+        font-size: large;
     }
 
 }
